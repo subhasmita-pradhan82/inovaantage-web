@@ -74,7 +74,11 @@ function LeadersSection() {
             position: "Sales and Marketing Director APAC",
             image: "https://inovaantage.com/wp-content/uploads/2025/01/ramanuj.png",
             quote: "Understand users.",
-            social: {}
+            social: {
+                facebook: "https://www.facebook.com",
+                twitter: "https://www.twitter.com",
+                linkedin: "https://www.linkedin.com"
+            }
         },
         {
             id: 7,
@@ -82,7 +86,11 @@ function LeadersSection() {
             position: "Marketing Director",
             image: "https://inovaantage.com/wp-content/uploads/2024/11/kirti.jpg",
             quote: "Lead globally.",
-            social: {}
+            social: {
+                facebook: "https://www.facebook.com",
+                twitter: "https://www.twitter.com",
+                linkedin: "https://www.linkedin.com"
+            }
         },
         {
             id: 8,
@@ -90,7 +98,11 @@ function LeadersSection() {
             position: "Advisor",
             image: "https://inovaantage.com/wp-content/uploads/2024/11/Ash.png",
             quote: "Diversity innovates.",
-            social: {}
+            social: {
+                facebook: "https://www.facebook.com",
+                twitter: "https://www.twitter.com",
+                linkedin: "https://www.linkedin.com"
+            }
         },
         {
             id: 9,
@@ -99,7 +111,9 @@ function LeadersSection() {
             image: "https://inovaantage.com/wp-content/uploads/2025/01/gareth.png",
             quote: "Build sustainable tech.",
             social: {
-                facebook: "https://www.facebook.com"
+                facebook: "https://www.facebook.com",
+                twitter: "https://www.twitter.com",
+                linkedin: "https://www.linkedin.com"
             }
         }
     ];;
@@ -154,7 +168,7 @@ function LeadersSection() {
 
                 <div class="leaders-text">
                     <h3>Our Leaders</h3>
-                    <p>Experienced professionals guiding digital transformation across three continents. <br/> <span style={{color: "var(--primary)", fontWeight: "600"}}>Innovating to realise business value.</span></p>
+                    <p>Experienced professionals guiding digital transformation across three continents. <br /> <span style={{ color: "var(--primary)", fontWeight: "600" }}>Innovating to realise business value.</span></p>
                 </div>
                 <div className="leaders-track">
 

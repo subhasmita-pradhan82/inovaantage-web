@@ -3,6 +3,8 @@ import Header from '../subComponent/Header';
 import Footer from '../subComponent/Footer';
 import Partners from '../subComponent/Partners';
 import LeadersSection from '../subComponent/LeadersSection';
+import DigitalTransformation from '../subComponent/DigitalTransformations';
+import UltraPremiumMap from '../subComponent/UltraPremiumMap';
 const HomePage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set(['hero']));
   const sectionRefs = {
@@ -30,7 +32,7 @@ const HomePage = () => {
       if (!element) return false;
       const rect = element.getBoundingClientRect();
       return (
-        rect.top <= (window.innerHeight - offset) && 
+        rect.top <= (window.innerHeight - offset) &&
         rect.bottom >= offset
       );
     };
@@ -38,7 +40,7 @@ const HomePage = () => {
     // Function to load visible sections
     const loadVisibleSections = () => {
       const newVisibleSections = new Set(visibleSections);
-      
+
       // Check each section and add to visible set if in viewport
       Object.entries(sectionRefs).forEach(([key, ref]) => {
         if (Array.isArray(ref)) {
@@ -88,28 +90,48 @@ const HomePage = () => {
       <Header />
       <div>
         <div className="video-hero-wrapper">
-          <video id="hero-video" autoPlay loop muted playsInline poster="https://via.placeholder.com/1280x720/0057A3/ffffff?text=INNOVANTAGE">
-            <source src="https://videos.pexels.com/video-files/3129674/3129674-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/5775850/5775850-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-          </video>
-          <div className="hero-video-overlay"></div>
+
+          {/* Animated Tech Background */}
+          <div className="tech-background"></div>
+
+          {/* Overlay */}
+          <div className="hero-overlay"></div>
+          
           <section className="hero-section">
-            <div className="container hero-content hidden-fade" id="hero-reveal">
-              <div className="hero-badge">IT/OT solutions · global footprint</div>
-              <h1>Driving <span>Digital Transformation</span> in Critical Industries</h1>
-              <div className="hero-sub">Data‑driven solutions for Telecom, Transportation, Utilities — from UK to Australia.</div>
-              <div className="hero-buttons">
-                <a href="#" className="btn btn-primary"><i className="fa-regular fa-compass"></i> Explore Solutions</a>
-                <a href="#" className="btn btn-secondary"><i className="fa-regular fa-user"></i> Meet Our Leaders</a>
+            <div className="container hero-content">
+
+              <div className="hero-badge">
+                IT / OT Solutions · Global Delivery Model
               </div>
+
+              <h1>
+                Driving <span>Digital Transformation</span>
+                <br /> in Critical Infrastructure
+              </h1>
+
+              <p className="hero-sub">
+                Data-driven platforms powering Telecom, Transportation, Utilities & Smart Infrastructure —
+                delivering innovation from UK to Australia.
+              </p>
+
+              <div className="hero-buttons">
+                <a href="#" className="btn btn-primary">
+                  <i className="fa-regular fa-compass"></i> Explore Solutions
+                </a>
+
+                <a href="#" className="btn btn-outline">
+                  <i className="fa-regular fa-user"></i> Meet Our Leaders
+                </a>
+              </div>
+
             </div>
           </section>
         </div>
-        
+
         <section className="about-section" id="about">
           <div className="container about-grid">
-            <div 
-              className="about-text hidden-fade" 
+            <div
+              className="about-text hidden-fade"
               ref={sectionRefs.aboutText}
             >
               <h2>About INNOVANTAGE</h2>
@@ -120,8 +142,8 @@ const HomePage = () => {
                 <div className="stat-item"><span className="stat-number">6</span> <span className="stat-label">countries</span></div>
               </div>
             </div>
-            <div 
-              className="about-highlight hidden-fade" 
+            <div
+              className="about-highlight hidden-fade"
               ref={sectionRefs.aboutHighlight}
             >
               <i className="fa-solid fa-chart-line"></i>
@@ -130,35 +152,36 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <Partners/>
+        <Partners />
+        <DigitalTransformation />
         <section className="verticals-section" id="verticals">
           <div className="container">
-            <div 
-              className="section-header hidden-fade" 
+            <div
+              className="section-header hidden-fade"
               ref={sectionRefs.verticalsHeader}
             >
               <h2>Industries We Transform</h2>
               <p style={{ color: "var(--primary)" }}>Deep domain expertise across three essential sectors</p>
             </div>
             <div className="vert-grid">
-              <div 
-                className="vert-card hidden-fade" 
+              <div
+                className="vert-card hidden-fade"
                 ref={sectionRefs.verticalsCards[0]}
               >
-                <div className="vert-icon"><i className="fa-solid fa-tower-cell"></i></div>
+                <div className="vert-icon"><i class="fas fa-satellite"></i></div>
                 <h3>Telecom</h3>
                 <p>Cutting‑edge technology for modern networks.</p>
               </div>
-              <div 
-                className="vert-card hidden-fade" 
+              <div
+                className="vert-card hidden-fade"
                 ref={sectionRefs.verticalsCards[1]}
               >
                 <div className="vert-icon"><i className="fa-solid fa-truck-fast"></i></div>
                 <h3>Transportation & Logistics</h3>
                 <p>Digitizing road data, asset management for national providers.</p>
               </div>
-              <div 
-                className="vert-card hidden-fade" 
+              <div
+                className="vert-card hidden-fade"
                 ref={sectionRefs.verticalsCards[2]}
               >
                 <div className="vert-icon"><i className="fa-solid fa-bolt"></i></div>
@@ -168,61 +191,92 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        
+
         <section className="case-section">
           <div className="container">
-            <div 
-              className="section-header hidden-fade" 
-              ref={sectionRefs.casesHeader}
-            >
+
+            <div className="section-header">
               <h2>Success in Action</h2>
-              <p style={{ color: "var(--primary)" }}>Real results for real infrastructure challenges</p>
+              <p>Real results for real infrastructure challenges</p>
             </div>
+
             <div className="case-grid">
-              <div 
-                className="case-card hidden-fade" 
-                ref={sectionRefs.casesCards[0]}
-              >
-                <div className="case-category"><i className="fa-regular fa-map"></i> Transportation And Logistics</div>
-                <h4>Road Data Digitization</h4>
-                <div className="case-client">Public Australian company – national location data</div>
-                <a href="#" className="case-link">Read more <i className="fa-solid fa-arrow-right"></i></a>
+
+              {/* Card 1 */}
+              <div className="case-card">
+                <div className="case-image transport-bg">
+                  <span className="case-badge">
+                    <i className="fa-solid fa-truck-fast"></i>
+                    Transportation & Logistics
+                  </span>
+                </div>
+
+                <div className="case-content">
+                  <h4>Road Data Digitization</h4>
+                  <p className="case-client">
+                    Public Australian company – National location data modernization
+                  </p>
+
+                  <div className="case-footer">
+                    <span className="case-link">
+                      View Case Study
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div 
-                className="case-card hidden-fade" 
-                ref={sectionRefs.casesCards[1]}
-              >
-                <div className="case-category"><i className="fa-regular fa-gear"></i> Transportation And Logistics</div>
-                <h4>Asset Management integration</h4>
-                <div className="case-client">Leading railroad company, Southeast Asia</div>
-                <a href="#" className="case-link">Read more <i className="fa-solid fa-arrow-right"></i></a>
+              <div className="case-card">
+                <div className="case-image rail-bg">
+                  <span className="case-badge">
+                    <i className="fa-solid fa-train"></i>
+                    Rail & Asset Management
+                  </span>
+                </div>
+
+                <div className="case-content">
+                  <h4>Asset Management Integration</h4>
+                  <p className="case-client">
+                    A leading railroad transportation company in the Southeast Asia region
+                  </p>
+
+                  <div className="case-footer">
+                    <span className="case-link">
+                      View Case Study
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div 
-                className="case-card hidden-fade" 
-                ref={sectionRefs.casesCards[2]}
-              >
-                <div className="case-category"><i className="fa-regular fa-map"></i> Road Data Digitization</div>
-                <h4>National location data platform</h4>
-                <div className="case-client">Phase II – Australian consortium</div>
-                <a href="#" className="case-link">Read more <i className="fa-solid fa-arrow-right"></i></a>
+              <div className="case-card">
+                <div className="case-image port-bg">
+                  <span className="case-badge">
+                    <i className="fa-regular fa-map"></i>
+                    Smart Port & Disaster Systems
+                  </span>
+                </div>
+
+                <div className="case-content">
+                  <h4>Port Management System</h4>
+                  <p className="case-client">
+                    Disaster Management system (AOMS) on HERE platform
+                  </p>
+
+                  <div className="case-footer">
+                    <span className="case-link">
+                      View Case Study
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div 
-                className="case-card hidden-fade" 
-                ref={sectionRefs.casesCards[3]}
-              >
-                <div className="case-category"><i className="fa-regular fa-train"></i> Rail & Logistics</div>
-                <h4>Asset Management implementation</h4>
-                <div className="case-client">SEA railroad: IoT + EAM</div>
-                <a href="#" className="case-link">Read more <i className="fa-solid fa-arrow-right"></i></a>
-              </div>
+
             </div>
           </div>
         </section>
-        
-        <LeadersSection sectionRefs={sectionRefs}/>
+        <LeadersSection sectionRefs={sectionRefs} />
       </div>
       <Footer />
-      
+
       <style jsx>{`
         .hidden-fade {
           opacity: 0;
