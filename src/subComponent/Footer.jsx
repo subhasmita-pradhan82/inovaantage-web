@@ -6,7 +6,13 @@ const Footer = () => {
             <div class="footer-container">
 
                 <div class="footer-col company">
-                    <img src="https://inovaantage.com/wp-content/uploads/2023/08/inovaantage-logo-footer1.png" class="footer-logo" alt="Inovaantage Logo" />
+                    {/* <img src="https://inovaantage.com/wp-content/uploads/2023/08/inovaantage-logo-footer1.png" class="footer-logo" alt="Inovaantage Logo" /> */}
+
+                      <img
+                            style={{ width: "250px" }}
+                            src="/assets/removebg-logo.png"
+                            alt="Inovaantage"
+                        />
 
                     <p class="footer-about">
                         Delivering cutting-edge digital transformation solutions across
@@ -24,7 +30,7 @@ const Footer = () => {
 
                     <div class="location-card">
                         <h5>🇺🇸 USA</h5>
-                        <p>1312 17th Street Unit #2229<br/>Denver, CO 80202</p>
+                        <p>473 E Carnegie Dr #200<br/>San Bernardino, CA 92408,<br /> United States</p>
                         <span>+1 720 263 9280</span>
                     </div>
 

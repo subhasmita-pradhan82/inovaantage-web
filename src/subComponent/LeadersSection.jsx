@@ -12,7 +12,7 @@ function LeadersSection() {
             id: 1,
             name: "Dr. Sukanta",
             position: "CEO UK",
-            image: "https://inovaantage.com/wp-content/uploads/2024/03/dr-sukanta-800x900-1.jpg",
+            image: "/leaders/dr-sukanta.png",
             quote: "Technology connects people.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -24,7 +24,7 @@ function LeadersSection() {
             id: 2,
             name: "Subra",
             position: "Director - Singapore",
-            image: "https://inovaantage.com/wp-content/uploads/2024/02/subra.gif",
+            image: "/leaders/subra.png",
             quote: "AI + humans = future.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -36,7 +36,7 @@ function LeadersSection() {
             id: 3,
             name: "Kharabela",
             position: "Director – India",
-            image: "https://inovaantage.com/wp-content/uploads/2024/04/kharabela-team.jpg",
+            image: "/leaders/kharabela.png",
             quote: "Transform everything.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -48,7 +48,7 @@ function LeadersSection() {
             id: 4,
             name: "Peekay",
             position: "Director – Malaysia",
-            image: "https://inovaantage.com/wp-content/uploads/2024/04/peekay-team.jpg",
+            image: "/leaders/peekay.png",
             quote: "Scale smart.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -60,7 +60,7 @@ function LeadersSection() {
             id: 5,
             name: "Ganesh",
             position: "Risk Advisor",
-            image: "https://inovaantage.com/wp-content/uploads/2024/04/ganesh-team.jpg",
+            image: "/leaders/ganesh.png",
             quote: "Strategy drives growth.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -72,7 +72,7 @@ function LeadersSection() {
             id: 6,
             name: "Dr. Ramanuj Banerjee",
             position: "Sales and Marketing Director APAC",
-            image: "https://inovaantage.com/wp-content/uploads/2025/01/ramanuj.png",
+            image: "/leaders/ramanuj.png",
             quote: "Understand users.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -84,7 +84,7 @@ function LeadersSection() {
             id: 7,
             name: "Kriti Jena",
             position: "Marketing Director",
-            image: "https://inovaantage.com/wp-content/uploads/2024/11/kirti.jpg",
+            image: "/leaders/Kriti_Jena.png",
             quote: "Lead globally.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -96,7 +96,7 @@ function LeadersSection() {
             id: 8,
             name: "Ash (Ashis) Panigrahi",
             position: "Advisor",
-            image: "https://inovaantage.com/wp-content/uploads/2024/11/Ash.png",
+            image: "/leaders/Ash.png",
             quote: "Diversity innovates.",
             social: {
                 facebook: "https://www.facebook.com",
@@ -108,7 +108,7 @@ function LeadersSection() {
             id: 9,
             name: "Gareth Stuart Brown",
             position: "Business Development Advisor",
-            image: "https://inovaantage.com/wp-content/uploads/2025/01/gareth.png",
+            image: "/leaders/gareth.png",
             quote: "Build sustainable tech.",
             social: {
                 facebook: "https://www.facebook.com",

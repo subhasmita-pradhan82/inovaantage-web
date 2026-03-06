@@ -10,7 +10,7 @@ const Header = () => {
                     <a href="/">
                         <img
                             style={{ width: "250px" }}
-                            src="/assets/inovaantage-logo-new.png"
+                            src="/assets/INOVAANTAGE_logo_orange.jpg"
                             alt="Inovaantage"
                         />
                     </a>
