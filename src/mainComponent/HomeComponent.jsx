@@ -15,7 +15,8 @@ const HomePage = () => {
     verticalsCards: [useRef(null), useRef(null), useRef(null)],
     casesHeader: useRef(null),
     casesCards: [useRef(null), useRef(null), useRef(null), useRef(null)],
-    leaders: useRef(null)
+    leaders: useRef(null),
+    ceosVision: useRef(null)
   };
 
   useEffect(() => {
@@ -85,6 +86,25 @@ const HomePage = () => {
     };
   }, []); // Empty dependency array for mount-only effect
 
+  useEffect(() => {
+
+    const cards = document.querySelectorAll(".scroll-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    cards.forEach(card => observer.observe(card));
+
+  }, []);
+
   return (
     <>
       <Header />
@@ -92,11 +112,21 @@ const HomePage = () => {
         <div className="video-hero-wrapper">
 
           {/* Animated Tech Background */}
-          <div className="tech-background"></div>
+          <div className="tech-background">
+            <video
+              className="hero-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/assets/hero_video.mp4" type="video/mp4" />
+            </video>
+          </div>
 
           {/* Overlay */}
           <div className="hero-overlay"></div>
-          
+
           <section className="hero-section">
             <div className="container hero-content">
 
@@ -134,7 +164,7 @@ const HomePage = () => {
               className="about-text hidden-fade"
               ref={sectionRefs.aboutText}
             >
-              <h2>About INNOVANTAGE</h2>
+              <h2>About INOVAANTAGE</h2>
               <p>We are a seasoned and highly proficient IT solutions company, dedicated to providing robust solutions to the telecommunications, transportation, and utilities sectors. With a strong focus on data‑driven strategies, we assist organizations in navigating their digital transformations and enhancing organizational performance.</p>
               <p>Since inception, we have made significant strides and established ourselves as a leading name in the IT/OT landscape. With a diverse portfolio, we deliver value through customized, technology‑driven innovations that exceed expectations.</p>
               <div className="global-stats">
@@ -161,7 +191,7 @@ const HomePage = () => {
               ref={sectionRefs.verticalsHeader}
             >
               <h2>Industries We Transform</h2>
-              <p style={{ color: "var(--primary)" }}>Deep domain expertise across three essential sectors</p>
+              <p style={{ color: "white" }}>Deep domain expertise across three essential sectors</p>
             </div>
             <div className="vert-grid">
               <div
@@ -193,87 +223,121 @@ const HomePage = () => {
         </section>
 
         <section className="case-section">
-          <div className="container">
 
-            <div className="section-header">
-              <h2>Success in Action</h2>
-              <p>Real results for real infrastructure challenges</p>
-            </div>
+          <div className="case-header">
+            <h2>Success in Action</h2>
+            <p>Real results for real infrastructure challenges</p>
+          </div>
 
-            <div className="case-grid">
+          <div className="scroll-cards">
 
-              {/* Card 1 */}
-              <div className="case-card">
-                <div className="case-image transport-bg">
-                  <span className="case-badge">
-                    <i className="fa-solid fa-truck-fast"></i>
-                    Transportation & Logistics
-                  </span>
+            {/* Card 1 */}
+            <div className="scroll-card left">
+              <div className="card">
+
+                <div className="card-image">
+                  <img src="/assets/Road_transport.png" alt="Road Data Digitization" />
+                  <h4>Road Data Digitization</h4>
                 </div>
 
-                <div className="case-content">
-                  <h4>Road Data Digitization</h4>
-                  <p className="case-client">
+                <div className="card-overlay">
+                  <p>
                     Public Australian company – National location data modernization
                   </p>
-
-                  <div className="case-footer">
-                    <span className="case-link">
-                      View Case Study
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </span>
-                  </div>
                 </div>
+                <a className="card-link"> View Case Study <i className="fa-solid fa-arrow-right"></i> </a>
               </div>
-              <div className="case-card">
-                <div className="case-image rail-bg">
-                  <span className="case-badge">
-                    <i className="fa-solid fa-train"></i>
-                    Rail & Asset Management
-                  </span>
-                </div>
+            </div>
 
-                <div className="case-content">
+
+            {/* Card 2 */}
+            <div className="scroll-card right">
+              <div className="card">
+
+                <div className="card-image">
+                  <img src="/assets/rail_transport.png" alt="Asset Management" />
                   <h4>Asset Management Integration</h4>
-                  <p className="case-client">
-                    A leading railroad transportation company in the Southeast Asia region
+                </div>
+
+                <div className="card-overlay">
+                  <p>
+                    A leading railroad transportation company in Southeast Asia
                   </p>
-
-                  <div className="case-footer">
-                    <span className="case-link">
-                      View Case Study
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </span>
-                  </div>
                 </div>
+                <a className="card-link"> View Case Study <i className="fa-solid fa-arrow-right"></i> </a>
               </div>
-              <div className="case-card">
-                <div className="case-image port-bg">
-                  <span className="case-badge">
-                    <i className="fa-regular fa-map"></i>
-                    Smart Port & Disaster Systems
-                  </span>
+            </div>
+
+
+            {/* Card 3 */}
+            <div className="scroll-card left">
+              <div className="card">
+
+                <div className="card-image">
+                  <img src="/assets/port_management.png" alt="Port Management" />
+                  <h4>Port Management System</h4>
                 </div>
 
-                <div className="case-content">
-                  <h4>Port Management System</h4>
-                  <p className="case-client">
+                <div className="card-overlay">
+                  <p>
                     Disaster Management system (AOMS) on HERE platform
                   </p>
-
-                  <div className="case-footer">
-                    <span className="case-link">
-                      View Case Study
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </span>
-                  </div>
                 </div>
+                <a className="card-link"> View Case Study <i className="fa-solid fa-arrow-right"></i> </a>
               </div>
-
             </div>
+
           </div>
+
         </section>
         <LeadersSection sectionRefs={sectionRefs} />
+
+        <section className="ceo-section">
+
+          <div className="ceo-container hidden-fade" ref={sectionRefs.ceosVision}>
+            <div className="ceo-image">
+              <img src="/leaders/dr-sukanta.png" alt="CEO" />
+            </div>
+            <div className="ceo-content">
+              <h2 className="ceo-title">CEO's Vision</h2>
+
+              <p>
+                The world around us has changed more in the past two decades than perhaps
+                in the past century. Things are moving so fast that predicting how
+                businesses will operate and influence our lives is becoming increasingly
+                difficult. And the development that we see all around us has also brought
+                fresh challenges.
+              </p>
+
+              <p>
+                What has not changed, however, is the human mind’s undying curiosity
+                to cross one frontier of knowledge after another.
+              </p>
+
+              <p>
+                In the industrialized society that we live in today, information
+                technology plays a role that’s broader and deeper than anything before.
+                It impacts the way people live, work, play, grow and interact.
+              </p>
+
+              <p>
+                Inovaantage has been creating solutions that directly or indirectly
+                serve the resources and utilities we all use on a daily basis. Within
+                that space, Inovaantage has been specializing in solutions for
+                power, telecom, transportation and logistics.
+              </p>
+
+              <p>
+                We feel honored to be part of multiple mission-critical projects.
+                Our success lies in delivering quality solutions and reaffirming
+                our commitment to making this planet a better place for everyone.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
       </div>
       <Footer />
 
