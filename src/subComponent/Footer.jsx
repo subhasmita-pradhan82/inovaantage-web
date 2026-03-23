@@ -35,7 +35,7 @@ const Footer = () => {
                     </div>
 
                     <div class="location-card">
-                        <h5>🇮🇳 India – Hyderabad</h5>
+                        <h5>🇮🇳 India - Hyderabad</h5>
                         <p>R R Towers, 4th Floor, Kavuri Hills,<br/>Madhapur, Telangana 500033</p>
                     </div>
                 </div>
@@ -68,9 +68,9 @@ const Footer = () => {
                     </div>
 
                     <div class="location-card">
-                        <h5>🇬🇧 United Kingdom</h5>
-                        <p>61A Bath Road, Reading RG30 2BB</p>
-                    </div>
+    <h5>🇬🇧 United Kingdom</h5>
+    <p> 167-169 Great Portland Street <br />London, UK</p>
+</div>
                 </div>
 
             </div>
