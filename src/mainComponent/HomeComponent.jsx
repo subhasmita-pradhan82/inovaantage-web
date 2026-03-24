@@ -5,6 +5,7 @@ import Partners from '../subComponent/Partners';
 import LeadersSection from '../subComponent/LeadersSection';
 import DigitalTransformation from '../subComponent/DigitalTransformations';
 import UltraPremiumMap from '../subComponent/UltraPremiumMap';
+import CoreValues from '../subComponent/CoreValues';
 const HomePage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set(['hero']));
   const sectionRefs = {
@@ -104,7 +105,6 @@ const HomePage = () => {
     cards.forEach(card => observer.observe(card));
 
   }, []);
-
   return (
     <>
       <Header />
@@ -159,29 +159,86 @@ const HomePage = () => {
         </div>
 
         <section className="about-section" id="about">
-          <div className="container about-grid">
-            <div
-              className="about-text hidden-fade"
-              ref={sectionRefs.aboutText}
-            >
+          <div className="container hidden-fade" ref={sectionRefs.aboutText}>
+            <div className="about-header "  >
               <h2>About INOVAANTAGE</h2>
-              <p>We are a seasoned and highly proficient IT solutions company, dedicated to providing robust solutions to the telecommunications, transportation, and utilities sectors. With a strong focus on data‑driven strategies, we assist organizations in navigating their digital transformations and enhancing organizational performance.</p>
-              <p>Since inception, we have made significant strides and established ourselves as a leading name in the IT/OT landscape. With a diverse portfolio, we deliver value through customized, technology‑driven innovations that exceed expectations.</p>
-              <div className="global-stats">
-                <div className="stat-item"><span className="stat-number">10+</span> <span className="stat-label">Utility engagements</span></div>
-                <div className="stat-item"><span className="stat-number">6</span> <span className="stat-label">countries</span></div>
+              <p>
+                Delivering scalable IT/OT solutions across telecom, utilities,
+                transportation, and logistics — enabling digital transformation
+                through innovation and data-driven strategies.
+              </p>
+            </div>
+            <div className="stats-grid">
+              <div className="stat-card">
+                <h3>10+</h3>
+                <span>Utility Engagements</span>
+              </div>
+
+              <div className="stat-card">
+                <h3>6+</h3>
+                <span>Countries Served</span>
+              </div>
+
+              <div className="stat-card">
+                <h3>24/7</h3>
+                <span>Global Support</span>
               </div>
             </div>
-            <div
-              className="about-highlight hidden-fade"
-              ref={sectionRefs.aboutHighlight}
-            >
-              <i className="fa-solid fa-chart-line"></i>
-              <h3>IT/OT landscape pioneers</h3>
-              <p style={{ color: "#1e2a3a" }}>Operating in UK, Australia, Malaysia, Singapore, India, and the USA. Specializing in electricity, telecom, transport & logistics.</p>
+
+            <div className="about-main">
+              <div className="about-text">
+                <p>
+                  INOVAANTAGE is a seasoned and highly proficient IT/OT solutions company,
+                  delivering robust and scalable solutions across telecommunications,
+                  transportation, utilities, and logistics sectors.
+                </p>
+
+                <p>
+                  We specialize in enabling data-driven digital transformation, helping
+                  organizations enhance operational performance, streamline processes,
+                  and achieve long-term efficiency through innovative, technology-led
+                  strategies.
+                </p>
+
+                <p>
+                  With a diverse portfolio of products and services, we provide customized
+                  solutions including GIS, ADMS, SCADA, OSS/BSS, project management,
+                  workforce management, and asset management for electric, water, gas,
+                  and fibre industries.
+                </p>
+
+                <p>
+                  We are recognized for our expertise in migrating from ArcMap Geometric
+                  Network to ArcGIS Pro & Utility Network, leveraging advanced geospatial
+                  technologies to improve spatial intelligence and operational efficiency.
+                </p>
+
+                <p>
+                  Our proprietary tool, rUNr, revolutionizes ESRI data migration by
+                  automating the transition to Utility Network with exceptional accuracy
+                  and speed.
+                </p>
+
+                <p>
+                  Operating across the UK, Australia, Malaysia, Singapore, India, and
+                  the USA, we offer global delivery with 24/7 support, ensuring timely
+                  implementation and seamless customer experiences worldwide.
+                </p>
+              </div>
+
+              <div className="about-highlight">
+                <i className="fa-solid fa-chart-line"></i>
+                <h3>Global IT/OT Transformation Leaders</h3>
+                <p>
+                  Driving innovation with GIS, SCADA, OSS/BSS, and advanced
+                  geospatial solutions across industries.
+                </p>
+              </div>
             </div>
+
           </div>
         </section>
+        <CoreValues reference={sectionRefs.aboutHighlight} />
         <Partners />
         <DigitalTransformation />
         <section className="verticals-section" id="verticals">
