@@ -1,40 +1,8 @@
 import React, { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { MdArrowOutward } from "react-icons/md";
 
 const Header = () => {
-  const [search, setSearch] = useState("");
-    const [results, setResults] = useState([]);
-
-    // related search data
-    const data = [
-        "Geospatial Services",
-        "Digital Services",
-        "Managed Services",
-        "Big Data Management",
-        "Caartera",
-        "Data Migration Tool",
-        "Conduit Pro",
-        "Telecom",
-        "Healthcare",
-        "Engineering"
-    ];
-
-    // search function
-    const handleSearch = (value) => {
-        setSearch(value);
-
-        if (value.trim() === "") {
-            setResults([]);
-            return;
-        }
-
-        const filtered = data.filter(item =>
-            item.toLowerCase().includes(value.toLowerCase())
-        );
-
-        setResults(filtered);
-    };
+  
     return (
         <div className="header inova-nav">
             <div className="container header-inner">
@@ -133,22 +101,7 @@ const Header = () => {
 
                 </ul>
 
-                 {/* search */}
-                <div className="search-box">
-                    <input type="text" placeholder="Search..." value={search} onChange={(e) => handleSearch(e.target.value)}/>
-
-                    {/* {Results dropdown */}
-                    {results.length > 0 && (
-                        <div className="search-results">
-                            {results.map((item, index) => (
-                                <div key={index} className="search-item">
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-
+                 
                 <a href="/contact" className="btn header-cta">
                     Contact Us<MdArrowOutward />
                 </a>
