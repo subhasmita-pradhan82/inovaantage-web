@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { MdArrowOutward } from "react-icons/md";
 
 const Header = () => {
+  
     return (
-        <div className="header">
+        <div className="header inova-nav">
             <div className="container header-inner">
 
                 {/* Logo */}
@@ -10,7 +12,7 @@ const Header = () => {
                     <a href="/">
                         <img
                             style={{ width: "250px" }}
-                            src="/assets/INOVAANTAGE_logo_orange.jpg"
+                            src="/assets/dark_logo.png"
                             alt="Inovaantage"
                         />
                     </a>
@@ -28,28 +30,23 @@ const Header = () => {
                             <li><a href="/mission">Our Mission</a></li>
                             <li><a href="/vision">Vision</a></li>
                             <li><a href="/leaders">Leaders</a></li>
-                            <li><a href="/ceo-vision">CEO’ Vision</a></li>
+                            <li><a href="/ceo-vision">CEO' Vision</a></li>
                         </ul>
                     </li>
 
-                    {/* Offering */}
-                    <li className="dropdown">
-                        <a href="#">Offering</a>
-                        <ul className="dropdown-menu">
-
-                            {/* Services */}
-                            <li className="dropdown-submenu">
-                                <a href="/digital-transformation-services">Services</a>
+                    {/* Services */}
+                            <li className="dropdown">
+                                <a href="/Services">Services</a>
                                 <ul className="dropdown-menu">
-                                    <li><a href="/digital-transformation-services/geospatial-services">Geospatial Services</a></li>
+                                   <li><a href="/digital-transformation-services/geospatial-services">Geospatial Services</a></li>
                                     <li><a href="/digital-transformation-services/digital-services">Digital Services</a></li>
                                     <li><a href="/digital-transformation-services/managed-services">Managed Services</a></li>
                                     <li><a href="/digital-transformation-services/big-data-management">Big Data Management</a></li>
                                 </ul>
                             </li>
 
-                            {/* Products */}
-                            <li className="dropdown-submenu">
+                    {/* Products */}
+                            <li className="dropdown">
                                 <a href="/products">Products</a>
                                 <ul className="dropdown-menu">
                                     <li><a href="/products/caartera">Caartera</a></li>
@@ -57,9 +54,6 @@ const Header = () => {
                                     <li><a href="/products/conduit-pro-2">Conduit Pro</a></li>
                                 </ul>
                             </li>
-
-                        </ul>
-                    </li>
 
                     {/* Industries */}
                     <li className="dropdown">
@@ -106,8 +100,10 @@ const Header = () => {
 
 
                 </ul>
+
+                 
                 <a href="/contact" className="btn header-cta">
-                    Contact Us
+                    Contact Us<MdArrowOutward />
                 </a>
 
             </div>
@@ -116,3 +112,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
