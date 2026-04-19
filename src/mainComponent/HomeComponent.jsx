@@ -6,6 +6,7 @@ import LeadersSection from '../subComponent/LeadersSection';
 import DigitalTransformation from '../subComponent/DigitalTransformations';
 import UltraPremiumMap from '../subComponent/UltraPremiumMap';
 import CoreValues from '../subComponent/CoreValues';
+
 const HomePage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set(['hero']));
   const sectionRefs = {
@@ -353,7 +354,7 @@ const HomePage = () => {
 
           <div className="ceo-container hidden-fade" ref={sectionRefs.ceosVision}>
             <div className="ceo-image">
-              <img src="/leaders/dr-sukanta.png" alt="CEO" />
+              <img src="/leaders/CEO.png" alt="CEO" />
             </div>
             <div className="ceo-content">
               <h2 className="ceo-title">CEO's Vision</h2>
@@ -397,19 +398,6 @@ const HomePage = () => {
         </section>
       </div>
       <Footer />
-
-      <style jsx>{`
-        .hidden-fade {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .hidden-fade.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </>
   );
 };
