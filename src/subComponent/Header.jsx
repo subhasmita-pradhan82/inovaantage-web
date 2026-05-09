@@ -1,188 +1,5 @@
-// import React, { useState, useEffect } from "react";
-// import { MdArrowOutward } from "react-icons/md";
 
-// const Header = () => {
-//     const [activeMenu, setActiveMenu] = useState(null);
-//     const [activeSubMenu, setActiveSubMenu] = useState(null);
-
-//     // toggle main menu
-//     const toggleMenu = (menu) => {
-//         setActiveMenu(activeMenu === menu ? null : menu);
-//         setActiveSubMenu(null);
-//     };
-
-//     // toggle submenu
-//     const toggleSubMenu = (submenu) => {
-//         setActiveSubMenu(activeSubMenu === submenu ? null : submenu);
-//     };
-
-//     // close when clicking outside
-//     useEffect(() => {
-//         const closeMenu = () => {
-//             setActiveMenu(null);
-//             setActiveSubMenu(null);
-//         };
-
-//         window.addEventListener("click", closeMenu);
-//         return () => window.removeEventListener("click", closeMenu);
-//     }, []);
-
-//     return (
-//         <div className="header inova-nav">
-//             <div className="container header-inner">
-
-//                 {/* Logo */}
-//                 <div className="logo-block">
-//                     <a href="/">
-//                         <img style={{ width: "250px" }} src="/assets/dark_logo.png" alt="Inovaantage"/>
-//                     </a>
-//                 </div>
-
-//                 {/* Navigation */}
-//                 <ul className="nav-menu">
-
-//                     {/* Home */}
-//                     <li className={`dropdown ${activeMenu === "home" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                         <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu("home"); }}>
-//                             Home
-//                         </a>
-//                         <ul className="dropdown-menu">
-//                             <li><a href="/about">About</a></li>
-//                             <li><a href="/core-values">Core Values</a></li>
-//                             <li><a href="/mission">Our Mission</a></li>
-//                             <li><a href="/vision">Vision</a></li>
-//                             <li><a href="/leaders">Leaders</a></li>
-//                             <li><a href="/ceo-vision">CEO Vision</a></li>
-//                         </ul>
-//                     </li>
-
-//                             {/* Services */}
-//                             <li className={`dropdown ${activeSubMenu === "services" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                                 <a href="#" onClick={(e) => { e.preventDefault(); toggleSubMenu("services"); }}>
-//                                     Services
-//                                 </a>
-
-//                                 <ul className="dropdown-menu">
-//                                     <li><a href="/digital-transformation-services/implementation-cots">COTS Implementation Services</a></li>
-//                                     <li><a href="/digital-transformation-services/geospatial-services">Geospatial Services</a></li>
-//                                     <li><a href="/digital-transformation-services/software-services">Software Services</a></li>
-//                                     <li><a href="/digital-transformation-services/managed-services">Managed Services</a></li>
-//                                 </ul>
-//                             </li>
-
-//                     {/* Products */}
-//                     <li className={`dropdown ${activeMenu === "products" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                         <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu("products"); }}>
-//                             Products
-//                         </a>
-//                         <ul className="dropdown-menu">
-//                             <li><a href="/products/conduitpro">ConduitPro</a></li>
-//                             <li><a href="/products/energize-deenergize">Energize & Deenergize</a></li>
-//                             <li><a href="/products/fueerza">Fueerza</a></li>
-//                             <li><a href="/products/rUNr">rUNr</a></li>
-//                             <li><a href="/products/sld">SLD</a></li>
-//                         </ul>
-//                     </li>
-
-//                     {/* Industries */}
-//                     <li className={`dropdown ${activeMenu === "industries" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                         <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu("industries"); }}>
-//                             Industries
-//                         </a>
-//                         <ul className="dropdown-menu">
-//                             <li><a href="/utilities">Business Vertical-Utility</a></li>
-//                             <li><a href="/telecom">Telecom</a></li>
-//                             <li><a href="/infrastructures">Infrastructures</a></li>
-//                         </ul>
-//                     </li>
-
-//                      {/* Bolg */}
-//                     <li className={`dropdown ${activeMenu === "blog" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                         <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu("blog"); }}>
-//                             Blog
-//                         </a>
-//                         <ul className="dropdown-menu">
-//                             <li><a href="/utilities">Business Vertical-Utility</a></li>
-//                             <li><a href="/telecom">Telecom</a></li>
-//                             <li><a href="/infrastructures">Infrastructures</a></li>
-//                         </ul>
-//                     </li>
-
-//                      {/* Gallery */}
-//                     <li className={`dropdown ${activeMenu === "gallery" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                         <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu("gallery"); }}>
-//                             Gallery
-//                         </a>
-//                         <ul className="dropdown-menu">
-//                             <li><a href="/utilities">Business Vertical-Utility</a></li>
-//                             <li><a href="/telecom">Telecom</a></li>
-//                             <li><a href="/infrastructures">Infrastructures</a></li>
-//                         </ul>
-//                     </li>
-
-//                     {/* Contact */}
-//                     <li className={`dropdown ${activeMenu === "contact" ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-//                         <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu("contact"); }}>
-//                             Contact Us
-//                         </a>
-//                         <ul className="dropdown-menu">
-//                             <li><a href="/our-offices">Our Offices</a></li>
-//                             <li><a href="/careers">Careers</a></li>
-//                         </ul>
-//                     </li>
-
-//                 </ul>
-
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Header;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { gsap } from "gsap";
 import "../mainComponent/styles/Header.css";
@@ -322,7 +139,7 @@ function useMagnetic(strength = 0.4) {
 const CTAButton = () => {
   const mag = useMagnetic(0.3);
   return (
-    <a href="/contact" className="cta-btn" aria-label="Get Started" {...mag}>
+    <Link to="/contact" className="cta-btn" aria-label="Get Started" {...mag}>
       <span className="cta-btn__text">Get Started</span>
       <span className="cta-btn__arrow" aria-hidden="true">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -330,7 +147,7 @@ const CTAButton = () => {
         </svg>
       </span>
       <span className="cta-btn__glow" aria-hidden="true" />
-    </a>
+   </Link>
   );
 };
 
@@ -347,13 +164,14 @@ const MegaMenu = ({ item, isOpen, menuRef }) => (
         <div key={ci} className="mega-menu__col">
           <p className="mega-menu__heading">{col.heading}</p>
           {col.items.map((sub, si) => (
-            <a key={si} href={sub.href} className="mega-menu__link" tabIndex={isOpen ? 0 : -1}>
+            // <a key={si} href={sub.href} className="mega-menu__link" tabIndex={isOpen ? 0 : -1}>
+            <Link key={si} to={sub.href} className="mega-menu__link" tabIndex={isOpen ? 0 : -1}>
               <span className="mega-menu__icon" aria-hidden="true">{sub.icon}</span>
               <span className="mega-menu__link-body">
                 <span className="mega-menu__link-label">{sub.label}</span>
                 <span className="mega-menu__link-desc">{sub.desc}</span>
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       ))}
@@ -370,13 +188,13 @@ const SimpleDropdown = ({ item, isOpen, menuRef }) => (
     aria-label={`${item.label} submenu`}
   >
     {item.items.map((sub, i) => (
-      <a key={i} href={sub.href} className="simple-drop__link" role="menuitem" tabIndex={isOpen ? 0 : -1}>
+      <Link key={i} to={sub.href} className="simple-drop__link"role="menuitem" tabIndex={isOpen ? 0 : -1}>
         <span className="simple-drop__icon" aria-hidden="true">{sub.icon}</span>
         <span className="simple-drop__body">
           <span className="simple-drop__label">{sub.label}</span>
           <span className="simple-drop__desc">{sub.desc}</span>
         </span>
-      </a>
+     </Link>
     ))}
   </div>
 );
@@ -472,11 +290,11 @@ const MobileMenu = ({ isOpen, onClose }) => {
       aria-label="Mobile Navigation"
     >
       <div className="mobile-overlay__header">
-        <a href="/" className="mobile-logo">
+        <Link to="/" className="mobile-logo">
           <img src="/assets/dark_logo.png" alt="Inovaantage" style={{ width: 160 }}
             onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "block"; }} />
           <span style={{ display: "none", fontWeight: 900, fontSize: 22, color: "#fff", fontStyle: "italic" }}>Inovaantage</span>
-        </a>
+        </Link>
         <button className="mobile-close" onClick={onClose} aria-label="Close menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
@@ -506,17 +324,18 @@ const MobileMenu = ({ isOpen, onClose }) => {
               {subs.length > 0 && expanded === item.key && (
                 <div className="mobile-group__subs">
                   {subs.map((sub, si) => (
-                    <a key={si} href={sub.href} className="mobile-sub" onClick={onClose}>
+                    // <a key={si} href={sub.href} className="mobile-sub" onClick={onClose}>
+                    <Link key={si} to={sub.href} className="mobile-sub" onClick={onClose}>
                       <span className="mobile-sub__icon">{sub.icon}</span>
                       <span>{sub.label}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
           );
         })}
-        <a href="/contact" className="mobile-cta" onClick={onClose}>Get Started →</a>
+        <Link to="/contact" className="mobile-cta" onClick={onClose}>Get Started →</Link>
       </nav>
     </div>
   );
@@ -626,7 +445,7 @@ const Header = () => {
 
         <div className="header-inner">
           {/* Logo */}
-          <a href="/" className="header-logo" aria-label="Inovaantage Home">
+          <Link to="/" className="header-logo" aria-label="Inovaantage Home">
             <img
               src="/assets/dark_logo.png"
               alt="Inovaantage"
@@ -640,7 +459,7 @@ const Header = () => {
               <span className="header-logo__text">Inovaantage</span>
               <span className="header-logo__dot" aria-hidden="true" />
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="header-nav" role="navigation" aria-label="Main navigation">
