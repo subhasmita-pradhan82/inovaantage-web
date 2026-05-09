@@ -424,8 +424,7 @@ export default function ServicesPage() {
           <div className="svc-products-grid">
             {PRODUCTS.map((product, i) => (
               <div
-               id={product.id}
-  className="svc-product-card"
+                 className="svc-product-card"
                 key={product.id}
                 style={{ "--p-color": product.color, animationDelay: `${i * 0.1}s` }}
               >

@@ -48,29 +48,30 @@ const NAV_DATA = [
     ],
   },
   {
-  key: "products",
-  label: "Products",
-  href: "#",
-  mega: true,
-  columns: [
-    {
-      heading: "Field Operations",
-      items: [
-        { label: "ConduitPro", href: "/services#ConduitPro", desc: "Network conduit management" },
-        { label: "Energize & Deenergize", href: "/services#energize", desc: "Power switching workflows" },
-        { label: "UNGRID", href: "/services#rUNr", desc: "Utility network intelligence platform" },
-      ],
-    },
-    {
-      heading: "Enterprise Tools",
-      items: [
-        { label: "Fueerza", href: "/services#fueerza", desc: "Field force automation" },
-        { label: "rUNr", href: "/services#rUNr", desc: "Route optimization engine" },
-        { label: "SLD", href: "/services#sld", desc: "Single line diagram tool" },
-      ],
-    },
-  ],
-},
+    key: "products",
+    label: "Products",
+    href: "#",
+    mega: true,
+    columns: [
+      {
+        heading: "Field Operations",
+        items: [
+          { label: "ConduitPro", href: "/products/conduitpro", desc: "Network conduit management" },
+          { label: "Energize & Deenergize", href: "/products/energize-deenergize", desc: "Power switching workflows" },
+          { label: "UNGRID", href: "/products/UNGRID", desc: "Utility network intelligence platform" },
+
+        ],
+      },
+      {
+        heading: "Enterprise Tools",
+        items: [
+          { label: "Fueerza", href: "/products/fueerza", desc: "Field force automation" },
+          { label: "rUNr", href: "/products/rUNr", desc: "Route optimization engine" },
+          { label: "SLD", href: "/products/sld", desc: "Single line diagram tool" },
+        ],
+      },
+    ],
+  },
   {
     key: "industries",
     label: "Industries",
