@@ -160,7 +160,6 @@
         box-shadow 0.2s ease;
     box-shadow: 0 4px 12px rgba(0, 87, 163, 0.18);
     z-index: 10;
-    /* keep arrows vertically centred relative to the card track */
     align-self: center;
 }
 
