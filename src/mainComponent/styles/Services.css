@@ -776,3 +776,7 @@
   .svc-vertical-stats { gap: 20px; }
   .svc-cta { padding: 70px 18px; }
 }
+
+html {
+  scroll-behavior: smooth;
+}
