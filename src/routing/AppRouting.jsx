@@ -48,7 +48,7 @@
 
 
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import HomeComponent from "../mainComponent/HomeComponent";
 import ProductsComponent from "../mainComponent/ProductsComponent";
 import ContactPage from "../mainComponent/ContactPage";
@@ -56,7 +56,7 @@ import ServicesPage from "../mainComponent/ServicesPage";
 
 function AppRounting() {
   return (
-    <BrowserRouter>
+   <HashRouter>
       <Routes>
         <Route path="/" element={<HomeComponent page="home" />} />
         <Route path="/products" element={<ProductsComponent />} />
@@ -65,7 +65,7 @@ function AppRounting() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/digital-transformation-services/:serviceId" element={<ServicesPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
