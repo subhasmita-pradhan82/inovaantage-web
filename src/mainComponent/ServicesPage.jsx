@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "../subComponent/Header";
 import Footer from "../subComponent/Footer";
-import "./styles/services.css";
+import "./styles/Services.css";
 
 // ── DATA ─────────────────────────────────────────────────────────────────────
 
