@@ -171,12 +171,12 @@ const HomePage = () => {
             </div>
             <div className="stats-grid">
               <div className="stat-card">
-                <h3>10+</h3>
+                <h3>28+</h3>
                 <span>Utility Engagements</span>
               </div>
 
               <div className="stat-card">
-                <h3>6+</h3>
+                <h3>9+</h3>
                 <span>Countries Served</span>
               </div>
 
